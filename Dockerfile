@@ -1,2 +1,4 @@
-FROM nginx:alpine
-COPY . /usr/var/nginx/html/
+FROM tomcat:9.0
+WORKDIR /app
+COPY . /app/
+CMD ["catalina", "run.sh"]
